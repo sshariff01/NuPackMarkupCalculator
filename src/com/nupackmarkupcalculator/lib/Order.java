@@ -6,8 +6,10 @@ public class Order {
 	private Integer num_workers;
 	
 	public Order(double cost, Integer workers, String category) {
+		// Ensure that initial price is rounded to two decimal places
 		this.initial_price = (double) Math.round(cost * 100) / 100;
 		
+		// Ensure that the number of workers is always >= 0
 		if (workers < 0) this.num_workers = 0;
 		else this.num_workers = workers;
 		

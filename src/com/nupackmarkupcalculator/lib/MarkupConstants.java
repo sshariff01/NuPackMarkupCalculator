@@ -1,6 +1,9 @@
 package com.nupackmarkupcalculator.lib;
 
 public class MarkupConstants {
+	/*
+	 * Define various markup percentages
+	 */
 	public static final double FLAT_MARKUP = 0.05;
 
 	public static final double LABOUR_MARKUP = 0.012;
@@ -13,6 +16,9 @@ public class MarkupConstants {
 
 	public static final double OTHER_MARKUP = 0.0;
 	
+	/*
+	 * Define all category constants
+	 */
 	public static final String PHARMACEUTICAL_CATEGORY = "drugs";
 	
 	public static final String FOOD_CATEGORY = "food";
