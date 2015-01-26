@@ -5,8 +5,8 @@ public class Order {
 	private String category;
 	private Integer num_workers;
 	
-	public Order(double price, Integer workers, String category) {
-		this.initial_price = price;
+	public Order(double cost, Integer workers, String category) {
+		this.initial_price = (double) Math.round(cost * 100) / 100;
 		if (workers < 0) this.num_workers = 0;
 		else this.num_workers = workers;
 		this.category = category;

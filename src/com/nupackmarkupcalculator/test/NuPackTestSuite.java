@@ -6,8 +6,7 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
    MarkupTest.class,
-   CategoryTest.class,
-   WorkersTest.class
+   OrderTest.class,
 })
 
 public class NuPackTestSuite {
