@@ -7,9 +7,19 @@ public class Order {
 	
 	public Order(double cost, Integer workers, String category) {
 		this.initial_price = (double) Math.round(cost * 100) / 100;
+		
 		if (workers < 0) this.num_workers = 0;
 		else this.num_workers = workers;
-		this.category = category;
+		
+		if (category == MarkupConstants.PHARMACEUTICAL_CATEGORY)
+			this.category = MarkupConstants.PHARMACEUTICAL_CATEGORY;
+		else if (category == MarkupConstants.FOOD_CATEGORY)
+			this.category = MarkupConstants.FOOD_CATEGORY;
+		else if (category == MarkupConstants.ELECTRONICS_CATEGORY)
+			this.category = MarkupConstants.ELECTRONICS_CATEGORY;
+		else {
+			this.category = MarkupConstants.OTHER_CATEGORY;
+		}
 		
 	}
 
@@ -30,7 +40,7 @@ public class Order {
 			this.category = MarkupConstants.PHARMACEUTICAL_CATEGORY;
 		else if (category == MarkupConstants.FOOD_CATEGORY)
 			this.category = MarkupConstants.FOOD_CATEGORY;
-		if (category == MarkupConstants.ELECTRONICS_CATEGORY)
+		else if (category == MarkupConstants.ELECTRONICS_CATEGORY)
 			this.category = MarkupConstants.ELECTRONICS_CATEGORY;
 		else {
 			this.category = MarkupConstants.OTHER_CATEGORY;
