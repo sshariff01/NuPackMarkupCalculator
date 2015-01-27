@@ -10,6 +10,7 @@ public class NuPackTestRunner {
       for (Failure failure : result.getFailures()) {
          System.out.println(failure.toString());
       }
-      System.out.println(result.wasSuccessful());
+      if (result.wasSuccessful()) System.out.println("SUCCESS: Test Suite Ran Successfully!");
+      else System.out.println("Test Suite Was Unsuccessful");
    }
 } 
